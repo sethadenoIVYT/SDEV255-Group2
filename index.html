@@ -4,9 +4,120 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>College Courses</title>
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            section{
+              padding: 40px 40px;
+            }
+          </style>
     </head>
     <body>
-        
+        <nav class="navbar navbar-expand-md navbar-light">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="inProgress.html">Add Course</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="inProgress.html">Remove Course</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="inProgress.html">Edit Course</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="inProgress.html">Account</a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="header">
+            <div class="container-lg">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-3 text-center text-md-start">
+                    <h1>
+                        <div class="display-3">Created Courses</div>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="courses">
+            <div class="col-sm-8">
+                <div class="container-lg">
+                        <div class="row justify-content-left align-items-center">
+                            <div class="col-md-8 text-center text-md-start">
+                            <h1>
+                                <div class="display-3">ACCT 203</div>
+                                <div class="display-7 text-muted">Cost Accounting I</div>
+                            </h1>
+                            <p class="lead my-4 text-muted">Examines the manufacturing process in relation to the accumulation of specific costs of manufactured products. Studies
+                                 various cost accounting report forms, material, labor control, and allocation of manufacturing costs to jobs and departments.</p>
+                            <p class="lead my-4 ">TOTAL CREDIT HOURS: 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-sm-8">
+                <div class="container-lg">
+                        <div class="row justify-content-left align-items-center">
+                            <div class="col-md-8 text-center text-md-start">
+                            <h1>
+                                <div class="display-3">AGRI 102</div>
+                                <div class="display-7 text-muted">Agricultural Business and Farm Management</div>
+                            </h1>
+                            <p class="lead my-4 text-muted">Deals with vast and complex business of agriculture; emphasizes modern business and farm production methods along with
+                                 current management and administrative strategies needed for success in an agricultural business.</p>
+                            <p class="lead my-4 ">TOTAL CREDIT HOURS: 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8">
+                <div class="container-lg">
+                        <div class="row justify-content-left align-items-center">
+                            <div class="col-md-8 text-center text-md-start">
+                            <h1>
+                                <div class="display-3">CSIA 260</div>
+                                <div class="display-7 text-muted">Business Continuity in an Information World</div>
+                            </h1>
+                            <p class="lead my-4 text-muted">Students will learn principles of incident response and disaster recovery. Identification of vulnerabilities and appropriate countermeasures to prevent and mitigate risks to an organization will be discussed.
+                                 Students will learn risk assessment, incident response, contingency planning, and prioritizing systems for disaster recovery. The importance of 
+                                 management’s roles and interaction with other organizational members will be discussed. Students will learn how to create a hardened network by developing system specific plans for the
+                                  protection of intellectual property, the implementation of access controls, and patch/change management. Students will gain an understanding of information assurance including the governing rules and guidelines.</p>
+                            <p class="lead my-4 ">TOTAL CREDIT HOURS: 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8">
+                <div class="container-lg">
+                        <div class="row justify-content-left align-items-center">
+                            <div class="col-md-8 text-center text-md-start">
+                            <h1>
+                                <div class="display-3">ENGR 261</div>
+                                <div class="display-7 text-muted">Dynamics</div>
+                            </h1>
+                            <p class="lead my-4 text-muted">Covers rectilinear and curvilinear motions, force, mass and acceleration, projectiles, pendulums, inertia forces in machines, work and energy, impulse and momentum and impact.</p>
+                            <p class="lead my-4 ">TOTAL CREDIT HOURS: 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
