@@ -1,26 +1,35 @@
 const express = require("express")
 var cors = require('cors')
 
+const bodyParser = require('body-parser')
+const Course = require("./models/courses")
 const app = express()
 app.use(cors())
+
+app.use(bodyParser.json())
 const router = express.Router()
 
-router.get("/courses", function(req,res) {
-    const courses = [{
-        number: "ENGR 261",
-        title: "Dynamics",
-        description: "Covers rectilinear and curvilinear motions, force, mass and acceleration, projectiles, pendulums, inertia forces in machines, work and energy, impulse and momentum and impact.",
-        hours: 3
-    },
-    {
-        number: "AGRI 102",
-        title: "Agricultural Business and Farm Management",
-        description: "Deals with vast and complex business of agriculture; emphasizes modern business and farm production methods along with current management and administrative strategies needed for success in an agricultural business.",
-        hours: 3
+router.get("/courses", async(req,res) => {
+    try {
+        const courses = await Course.find({})
+        res.send(courses)
+        console.log(courses)
     }
-];
+    catch (err) {
+        console.log(err)
+    }
+})
 
-    res.json(courses)
+router.post("/courses", async(req,res) => {
+    try {
+        const course = await new Course(req.body)
+        await course.save()
+        res.status(201).json(course)
+        console.log(course)
+    }
+    catch (err) {
+        res.status(400).send(err)
+    }
 })
 
 app.use("/api", router)
