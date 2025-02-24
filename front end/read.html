@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>College Courses</title>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/read.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,17 +15,6 @@
       section {
         padding: 40px 40px;
       }
-      a:link {
-        color: grey;
-        background-color: transparent;
-        text-decoration: none;
-        }
-
-      a:visited {
-        color: black;
-        background-color: transparent;
-        text-decoration: none;
-        }
     </style>
   </head>
   <body>
@@ -68,18 +57,14 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-md-3 text-center text-md-start">
             <h1>
-              <div class="display-3">Created Courses</div>
+              <div class="display-3">Course Info</div>
             </h1>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="courses">
-      <ul>
-        <div id="courseList"></div>
-      </ul>
-    </section>
+    <div id="displayCourse"></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

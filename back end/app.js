@@ -20,6 +20,16 @@ router.get("/courses", async(req,res) => {
     }
 })
 
+router.get("/courses/:id", async (req,res) => {
+    try {
+        const course = await Course.findById(req.params.id)
+        res.json(course)
+    }
+    catch (err) {
+        res.status(400).send(err)
+    }
+})
+
 router.post("/courses", async(req,res) => {
     try {
         const course = await new Course(req.body)
