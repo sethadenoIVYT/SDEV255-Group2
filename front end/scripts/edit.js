@@ -2,7 +2,7 @@ addEventListener("DOMContentLoaded", async function(){
     document.querySelector("#updateBtn").addEventListener("click",updateCourse)
     const urlparam = new URLSearchParams(window.location.search)
     const courseID = urlparam.get('id')
-    const response = await fetch("http://localhost:3000/api/courses/" + courseID)
+    const response = await fetch("https://burnt-peach-marjoram.glitch.me/api/courses/" + courseID)
     if(response.ok){
         let course = await response.json()
         document.querySelector("#number").value = course.number
@@ -21,7 +21,7 @@ async function updateCourse() {
         hours: document.querySelector("#hours").value,
     }
          
-    const response = await fetch("http://localhost:3000/api/courses/" + courseID, {
+    const response = await fetch("https://burnt-peach-marjoram.glitch.me/api/courses/" + courseID, {
        method: "PUT",
        headers: {
           "Content-Type": "application/json"
