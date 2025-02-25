@@ -42,5 +42,17 @@ router.post("/courses", async(req,res) => {
     }
 })
 
+router.put("/courses/:id", async(req,res) => {
+    try {
+        const course = req.body
+        await Course.updateOne({_id: req.params.id}, course)
+        console.log(course)
+        res.sendStatus(204)
+    }
+    catch (err) {
+        res.status(400).send(err)
+    }
+})
+
 app.use("/api", router)
 app.listen(3000)
